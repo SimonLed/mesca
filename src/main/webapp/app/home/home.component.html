@@ -3,13 +3,13 @@
         <span class="hipster img-fluid rounded"></span>
     </div>
     <div class="col-md-9">
-        <h1 class="display-4" jhiTranslate="home.title">Welcome, {{account.firstName}} !</h1>
+        <h1 class="display-4" jhiTranslate="home.title">Welcome, Boy!</h1>
         <p class="lead" jhiTranslate="home.subtitle">This is your homepage</p>
 
         <div [ngSwitch]="isAuthenticated()">
-            <div class="alert alert-info" *ngSwitchCase="true">
+            <div class="alert alert-secondary" *ngSwitchCase="true">
                 <span id="home-logged-message" *ngIf="account" jhiTranslate="home.logged.message"
-                    [translateValues]="{username: account.login}"> You are logged in as user "{{account.login}}". </span>
+                    [translateValues]="{username: account.login}"> You are logged in as user {{account.login}}. </span>
             </div>
 
             <div class="alert alert-warning" *ngSwitchCase="false">
